@@ -1,0 +1,57 @@
+name: Suggest a resource
+description: Something free that students should know about, or a fix to an entry
+title: "Suggest: "
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: For example, Supabase
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: The provider's own page that shows what's free.
+      placeholder: https://
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Where does it fit?
+      options:
+        - Chat assistant
+        - App builder
+        - Coding agent
+        - AI model API
+        - Database or hosting
+        - Agent tools (search, scraping, tracing)
+        - GPUs
+        - Campus resource
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: free
+    attributes:
+      label: What's free, and who qualifies?
+    validations:
+      required: true
+  - type: textarea
+    id: catch
+    attributes:
+      label: What's the catch?
+      description: For example, a card is required, it bills after a trial, it's non-commercial only, or it uses your data for training.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I found this on the provider's own page, not only in a blog post or forum.
+          required: true
+        - label: One person can claim it without a company, an investor or an accelerator.
+          required: true
+        - label: The link is not a referral or affiliate link.
+          required: true
